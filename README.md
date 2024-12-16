@@ -1,5 +1,7 @@
 # Windsurf-free Account Registration Assistant (Unlimited Trial)
 
+[English](#windsurf-free-account-registration-assistant-unlimited-trial) | [中文](#windsurf-free-账号自动注册助手同一邮箱无限试用)
+
 This is an automatic registration tool for Windsurf accounts, allowing you to use Windsurf Pro features unlimitedly with just one email.
 
 ## Prerequisites
@@ -44,6 +46,8 @@ This project is for learning and research purposes only. Not for commercial use.
 ---
 
 # Windsurf-free 账号自动注册助手（同一邮箱无限试用）
+
+[English](#windsurf-free-account-registration-assistant-unlimited-trial) | [中文](#windsurf-free-账号自动注册助手同一邮箱无限试用)
 
 这是一个自动注册 Windsurf 账号的工具，你只需要一个邮箱即可无限使用windsurfpro用户功能。
 
