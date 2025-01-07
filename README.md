@@ -2,7 +2,6 @@
 
 [English](#windsurf-free-account-registration-assistant-unlimited-trial) | [中文](#windsurf-free-账号自动注册助手同一邮箱无限试用)
 
-官方调整了免费free用户权限，无法使用Claudesonnet了，项目终止。
 
 This is an automatic registration tool for Windsurf accounts, allowing you to use Windsurf Pro features unlimitedly with just one email.
 
