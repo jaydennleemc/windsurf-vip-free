@@ -1,0 +1,52 @@
+2025-01-23 01:17:53 - INFO - Chrome data cleaned successfully
+2025-01-23 01:17:53 - INFO - 正在尝试注册账号: windsurf1@2925.com
+2025-01-23 01:17:53 - INFO - Chrome data cleaned successfully
+2025-01-23 01:17:53 - INFO - ====== WebDriver manager ======
+2025-01-23 01:17:58 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 01:17:58 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 01:17:58 - INFO - There is no [mac64] chromedriver "131.0.6778.264" for browser google-chrome "131.0.6778" in cache
+2025-01-23 01:17:58 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 01:17:58 - INFO - WebDriver version 131.0.6778.264 selected
+2025-01-23 01:17:58 - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.264/mac-arm64/chromedriver-mac-arm64.zip
+2025-01-23 01:17:58 - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.264/mac-arm64/chromedriver-mac-arm64.zip
+2025-01-23 01:17:59 - INFO - Driver downloading response is 200
+2025-01-23 01:17:59 - INFO - Get LATEST chromedriver version for google-chrome
+2025-01-23 01:17:59 - INFO - Driver has been saved in cache [/Users/jayden/.wdm/drivers/chromedriver/mac64/131.0.6778.264]
+2025-01-23 01:18:00 - INFO - 正在打开注册页面...
+2025-01-23 01:18:07 - INFO - 注册页面加载成功
+2025-01-23 01:18:07 - INFO - 正在填写注册信息...
+2025-01-23 01:18:07 - INFO - 正在提交注册信息...
+2025-01-23 01:18:35 - ERROR - Onboarding process error: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=131.0.6778.265)
+Stacktrace:
+0   chromedriver                        0x000000010067a138 cxxbridge1$str$ptr + 3653888
+1   chromedriver                        0x0000000100672988 cxxbridge1$str$ptr + 3623248
+2   chromedriver                        0x00000001000d8968 cxxbridge1$string$len + 89228
+3   chromedriver                        0x00000001000b3e44 core::str::slice_error_fail::ha0e52dbcb60e6bae + 3780
+4   chromedriver                        0x0000000100142c84 cxxbridge1$string$len + 524200
+5   chromedriver                        0x0000000100155b60 cxxbridge1$string$len + 601732
+6   chromedriver                        0x0000000100111564 cxxbridge1$string$len + 321672
+7   chromedriver                        0x00000001001121b4 cxxbridge1$string$len + 324824
+8   chromedriver                        0x0000000100644fc0 cxxbridge1$str$ptr + 3436424
+9   chromedriver                        0x00000001006482dc cxxbridge1$str$ptr + 3449508
+10  chromedriver                        0x000000010062be60 cxxbridge1$str$ptr + 3333672
+11  chromedriver                        0x0000000100648b9c cxxbridge1$str$ptr + 3451748
+12  chromedriver                        0x000000010061d678 cxxbridge1$str$ptr + 3274304
+13  chromedriver                        0x00000001006632b4 cxxbridge1$str$ptr + 3560060
+14  chromedriver                        0x0000000100663430 cxxbridge1$str$ptr + 3560440
+15  chromedriver                        0x00000001006725fc cxxbridge1$str$ptr + 3622340
+16  libsystem_pthread.dylib             0x00000001982b02e4 _pthread_start + 136
+17  libsystem_pthread.dylib             0x00000001982ab0fc thread_start + 8
+
+2025-01-23 01:18:35 - INFO - 正在清理Chrome进程...
+2025-01-23 01:18:35 - INFO - Chrome data cleaned successfully
+2025-01-23 01:18:35 - INFO - Chrome数据清理完成
+2025-01-23 01:18:35 - INFO - Chrome data cleaned successfully
+2025-01-23 01:18:35 - INFO - Chrome数据清理完成
+2025-01-23 01:18:38 - INFO - Chrome data cleaned successfully
+2025-01-23 01:18:38 - INFO - Chrome数据清理完成
+2025-01-23 01:18:55 - INFO - Chrome data cleaned successfully
+2025-01-23 01:18:55 - ERROR - Error cleaning Chrome data: invalid command name ".!frame.!labelframe5.!text"
+2025-01-23 01:19:58 - INFO - Chrome data cleaned successfully
+2025-01-23 01:19:58 - ERROR - Error cleaning Chrome data: invalid command name ".!frame.!labelframe5.!text"

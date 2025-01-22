@@ -30,11 +30,10 @@ EMAIL_DOMAINS = [
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Chrome settings
-CHROME_EXECUTABLE = os.path.join(ROOT_DIR, "chrome", "chrome.exe")
-CHROME_DRIVER = os.path.join(ROOT_DIR, "chrome", "chromedriver.exe")
+CHROME_EXECUTABLE = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
 
 # Chrome user data directory
-CHROME_USER_DATA_DIR = os.path.join(ROOT_DIR, "chrome", "userdata")
+CHROME_USER_DATA_DIR = os.path.expanduser('~/Library/Application Support/Google/Chrome/WindsurfProfile')
 CHROME_TEMP_DIR = os.path.join(ROOT_DIR, "chrome", "temp")
 
 # 确保目录存在
@@ -45,8 +44,6 @@ os.makedirs(CHROME_TEMP_DIR, exist_ok=True)
 # 检查必要文件
 if not os.path.exists(CHROME_EXECUTABLE):
     logging.error(f"Chrome可执行文件不存在: {CHROME_EXECUTABLE}")
-if not os.path.exists(CHROME_DRIVER):
-    logging.error(f"ChromeDriver不存在: {CHROME_DRIVER}")
 
 # URLs
 REGISTER_URL = "https://codeium.com/account/register"

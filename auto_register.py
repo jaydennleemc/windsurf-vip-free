@@ -14,11 +14,11 @@ from selenium.common.exceptions import (
     NoSuchElementException,
     WebDriverException
 )
+from webdriver_manager.chrome import ChromeDriverManager
 from config import (
     REGISTER_URL,
     PROFILE_URL,
     CHROME_EXECUTABLE,
-    CHROME_DRIVER,
     CHROME_USER_DATA_DIR,
     CHROME_TEMP_DIR,
     PAGE_LOAD_TIMEOUT,
@@ -30,7 +30,7 @@ from config import (
     WINDOW_WIDTH,
     WINDOW_HEIGHT
 )
-from utils import show_message, clean_all_chrome_data, check_chrome_versions
+from utils import show_message, clean_all_chrome_data
 import ctypes
 
 class RegistrationBot:
@@ -39,7 +39,7 @@ class RegistrationBot:
         self.driver = None
         self.wait = None
         try:
-            clean_all_chrome_data()  # 移除参数
+            clean_all_chrome_data()
         except Exception as e:
             logging.error(f"Error during cleanup: {e}")
         
@@ -53,43 +53,42 @@ class RegistrationBot:
             options = webdriver.ChromeOptions()
             options.binary_location = CHROME_EXECUTABLE
             
-            # 基本设置
+            # Basic settings
             options.add_argument('--no-sandbox')
             options.add_argument('--disable-dev-shm-usage')
             
-            # 禁用GPU相关功能
+            # Disable GPU-related features
             options.add_argument('--disable-gpu')
             options.add_argument('--disable-software-rasterizer')
             options.add_argument('--disable-gpu-sandbox')
             options.add_argument('--disable-extensions')
             
-            # 禁用日志和错误报告
+            # Disable logging and error reporting
             options.add_argument('--disable-logging')
-            options.add_argument('--log-level=3')  # 只显示致命错误
+            options.add_argument('--log-level=3')
             options.add_argument('--silent')
             
-            # 设置用户数据目录
+            # Set user data directory
             options.add_argument(f'--user-data-dir={CHROME_USER_DATA_DIR}')
             options.add_argument(f'--disk-cache-dir={CHROME_TEMP_DIR}')
             
-            # 创建Chrome服务
-            service = Service(executable_path=CHROME_DRIVER)
+            if self.headless:
+                options.add_argument('--headless')
             
-            # 创建Chrome驱动
+            # Create Chrome driver using webdriver-manager
+            service = Service(ChromeDriverManager().install())
             self.driver = webdriver.Chrome(service=service, options=options)
             self.driver.set_page_load_timeout(PAGE_LOAD_TIMEOUT)
             self.wait = WebDriverWait(self.driver, ELEMENT_WAIT_TIMEOUT)
             
-            # 设置窗口位置和大小
-            screen_width = ctypes.windll.user32.GetSystemMetrics(0)
-            x_position = int(screen_width * 0.3)  # 改为屏幕宽度的30%位置
+            # Set window position and size
             self.driver.set_window_size(WINDOW_WIDTH, WINDOW_HEIGHT)
-            self.driver.set_window_position(x_position, 50)  # 上边距保持50
+            self.driver.set_window_position(50, 50)
             
             return True
             
         except Exception as e:
-            logging.error(f"设置Chrome驱动时出错: {e}")
+            logging.error(f"Error setting up Chrome driver: {e}")
             if hasattr(self, 'driver') and self.driver:
                 try:
                     self.driver.quit()
